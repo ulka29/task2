@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PERSONAL INFORMATION</title>
+    <link rel="stylesheet" href="form.css" class="css">
+</head>
+<body>
+    <div class="container">
+    <h1><center> PERSONAL INFORMATION </center></h1>
+    <fieldset>
+    <h3>WELCOME TO THE PAGE</h3>
+    <form id="form1" onsubmit="">
+<p>
+    First Name*: <input type="text" name="fname" id="fname" required> 
+</p>
+<p>
+    Last Name*: <input type="text" name="lname" id="lname" required> 
+</p>
+<p>
+    Mobile Number*: <input type="tel" name="contactNum" id="contactNum" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" required> 
+</p>
+<p>
+    Address : <textarea cols="50" rows="10" id="Address"></textarea>
+</p>
+<p>
+    Date-Of-Birth: <input type="date" name="dob" id="dob"> 
+</p>
+
+</fieldset>
+<hr>
+
+<p>content in * are compelsury to fill</p>
+
+<p>
+    <button type="button" id="submit">SAVE DETAILS</button>
+    <!-- <input type="submit" value="SAVE DETAILS" id="submit"> -->
+</p>
+</div>
+    </form>
+    <script>
+        let submit=document.getElementById("submit");
+        submit.addEventListener('click',()=>{
+            alert("want to save");
+            const fName = document.getElementById("fname").value;
+            const lName = document.getElementById("lname").value;
+            const contactNum = document.getElementById("contactNum").value;
+            const Address = document.getElementById("Address").value;
+            const dob = document.getElementById("dob").value;
+            
+            console.log("first name: "+fName);
+            console.log("last name: "+lName);
+            console.log("Mobile Number:  "+contactNum);
+            console.log("Address : "+Address);
+            console.log("Date-Of-Birth: "+dob);
+        })
+  //      console.log("first name: "+fName);
+    </script>
+</body>
+</html>
